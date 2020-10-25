@@ -15,4 +15,4 @@ jobs:
         run: docker-compose build
 
       - name: Tox
-        run: docker-compose run --rm app /bin/bash -c "tox"
+        run: docker-compose run --rm app /bin/bash -c "cd app/ && tox"
