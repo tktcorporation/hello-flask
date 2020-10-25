@@ -1,11 +1,11 @@
-name: Test
+name: Tox
 
 on: pull_request
 
 jobs:
   lint:
-    name: Lint & Test
-    runs-on: Python3.9
+    name: Tox
+    runs-on: Python:3.9
 
     steps:
       - name: Checkout
