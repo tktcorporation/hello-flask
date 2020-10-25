@@ -2,15 +2,15 @@ version: "3.7"
 services:
   app:
     build: ./app/
-    working_dir: /app
+    working_dir: /work
     volumes:
-      - ./app:/app:cached
-      - /app/__pycache__
-      - /app/.venv/
-      - /app/.tox/
-      - /app/.mypy_cache
-      - /app/.pytest_cache
+      - .:/work:cached
+      - /work/app/__pycache__
+      - /work/app/.venv/
+      - /work/app/.tox/
+      - /work/app/.mypy_cache
+      - /work/app/.pytest_cache
     environment:
-        - FLASK_ENV=development
+      - FLASK_ENV=development
     ports:
-    - "5000:5000"
+      - "5000:5000"
