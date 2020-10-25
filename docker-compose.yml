@@ -8,6 +8,8 @@ services:
       - /app/__pycache__
       - /app/.venv/
       - /app/.tox/
+      - /app/.mypy_cache
+      - /app/.pytest_cache
     environment:
         - FLASK_ENV=development
     ports:
