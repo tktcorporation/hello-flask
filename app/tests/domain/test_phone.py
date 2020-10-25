@@ -1,5 +1,4 @@
 from src.domain.phone import Phone
-import pytest
 
 
 def test_initialze():
