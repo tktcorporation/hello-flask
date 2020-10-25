@@ -1,4 +1,4 @@
-class Phone():
+class Phone:
     name: str
 
     def __init__(self, name: str):
