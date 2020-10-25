@@ -1,3 +1,3 @@
 import sys
-sys.path.append('../src/domain/')
+sys.path.append('../src/')
 from src import *
