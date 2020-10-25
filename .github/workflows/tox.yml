@@ -5,11 +5,14 @@ on: pull_request
 jobs:
   lint:
     name: Tox
-    runs-on: python:3.9
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Build containers
+        run: docker-compose build
+
       - name: Tox
-        run: tox
+        run: docker-compose run --rm app /bin/bash -c "tox"
