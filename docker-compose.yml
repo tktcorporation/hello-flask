@@ -6,6 +6,8 @@ services:
     volumes:
       - ./app:/app:cached
       - /app/__pycache__
+      - /app/.venv/
+      - /app/.tox/
     environment:
         - FLASK_ENV=development
     ports:
