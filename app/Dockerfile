@@ -1,11 +1,13 @@
 FROM python:3.9
 
-RUN pip install Flask
+ARG project_dir=/app
 
-WORKDIR /app
+WORKDIR ${project_dir}
+
+ADD requirements.txt .
+
+RUN pip install -r requirements.txt
 
 ADD . .
-
-# ENTRYPOINT [ "/bin/bash" ]
 
 CMD ["/bin/bash", "-c", "flask run -h 0.0.0.0"]
