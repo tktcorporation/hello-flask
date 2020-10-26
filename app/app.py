@@ -5,23 +5,23 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello():
+def hello() -> str:
     name: str = "Hello World"
     return name
 
 
 @app.route("/good")
-def good():
+def good() -> str:
     name = "Good"
     return name
 
 
 @app.route("/phone")
-def phone():
+def phone() -> str:
     phone = Phone("iPhone 12")
     return phone.get_name()
 
 
-## おまじない
+# おまじない
 if __name__ == "__main__":
     app.run(debug=True)
