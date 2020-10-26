@@ -15,7 +15,7 @@ jobs:
         run: docker-compose build
 
       - name: Format
-        run: docker-compose run --rm app /bin/bash -c "black . --check"
+        run: docker-compose run --rm app /bin/bash -c "cd app/ && black . --check"
 
       - name: Test
-        run: docker-compose run --rm app /bin/bash -c "pytest"
+        run: docker-compose run --rm app /bin/bash -c "cd app/ && pytest"
